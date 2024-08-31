@@ -1,0 +1,24 @@
+<div #myModal class="container">
+  <div class="content">
+    <header>
+      <button (click)="close()">x</button>
+    </header>
+
+    @if (characterInformation()) {
+      <div class="img-container">
+        <img [src]="characterInformation().image" [alt]="characterInformation().name">
+      </div>
+      <main>
+        <h2>{{ characterInformation().name }}</h2>
+        <p class="statusSpecie">{{ characterInformation().status }} | {{ characterInformation().species }}</p>
+        <p><span>Gender: </span> {{ characterInformation().gender }}</p>
+        <p><span>Origin: </span>{{ characterInformation().origin.name }}</p>
+        <p><span>Last known location</span> <br> {{ characterInformation().location.name }}</p>
+      </main>
+    }
+    <footer>
+<!--      Footer-->
+    </footer>
+
+  </div>
+</div>

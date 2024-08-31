@@ -1,5 +1,5 @@
 {
-  "name": "curso-segie-code",
+  "name": "curso-angular18",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:curso-segie-code": "node dist/curso-segie-code/server/server.mjs"
+    "serve:ssr:curso-angular18": "node dist/curso-angular18/server/server.mjs"
   },
   "private": true,
   "dependencies": {

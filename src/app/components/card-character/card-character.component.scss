@@ -1,0 +1,47 @@
+
+h3{
+  font-size: 1.1rem;
+  margin: 0;
+}
+p{
+  font-size: 0.9rem;
+  margin: 0;
+}
+span{
+  font-weight: bold;
+}
+
+.card{
+  background-color: #f7f5ba;
+  box-shadow: 0 0 4px 1px #5d5d5d;
+  border-radius: 5px;
+  padding: .4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header{
+  height: 2.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main{
+  img{
+    text-align: center;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+footer{
+  flex: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card:hover{
+  transform: scale(1.1);
+  transition: .2s;
+  cursor: pointer;
+}

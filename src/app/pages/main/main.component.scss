@@ -1,0 +1,19 @@
+header{
+  text-align: center;
+  margin: 2rem;
+  color: #2b6c7a;
+  font-size: 1.5rem;
+}
+
+.placeholder{
+  aspect-ratio: 1/1;
+  height: 200px;
+}
+
+.characters{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 16px;
+  grid-row-gap: 1.5rem;
+  margin: 0 2rem;
+}

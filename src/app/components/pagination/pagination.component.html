@@ -1,0 +1,15 @@
+<section class="pagination">
+  <div>
+    <button (click)="changePage(pageLocal()-1)"
+            [disabled]="pageLocal() == 1"
+    >Previous
+    </button>
+  </div>
+  <div>
+    <p>{{ pageLocal() }}</p>
+  </div>
+  <div>
+    <button (click)="changePage(pageLocal()+1)">Next</button>
+  </div>
+</section>
+
