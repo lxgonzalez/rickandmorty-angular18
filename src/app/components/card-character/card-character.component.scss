@@ -1,3 +1,4 @@
+@import "../../../../public/colors.scss";
 
 h3{
   font-size: 1.1rem;
@@ -12,7 +13,7 @@ span{
 }
 
 .card{
-  background-color: #f7f5ba;
+  background: $secondary;
   box-shadow: 0 0 4px 1px #5d5d5d;
   border-radius: 5px;
   padding: .4rem;

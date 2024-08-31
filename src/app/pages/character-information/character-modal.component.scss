@@ -1,3 +1,5 @@
+@import "../../../../public/colors.scss";
+
 span{
   font-weight: bold;
 }
@@ -16,12 +18,11 @@ h2{
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
-  color: white;
 
 }
 
 .content {
-  background-color: #5d5d5d;
+  background-color:$secondary;
   margin: auto;
   width: 80%;
   border-radius: 10px;
