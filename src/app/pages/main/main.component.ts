@@ -27,7 +27,7 @@ export class MainComponent {
 
   private serviceCharacter = inject(CharactersService)
   characters$: Observable<Character[]> = this.serviceCharacter.getCharacters(1)
-  character$: Observable<Character>
+
   modal = viewChild.required(CharacterModalComponent);
 
   async makeApiCall(url: string) {

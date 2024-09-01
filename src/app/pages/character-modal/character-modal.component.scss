@@ -19,8 +19,8 @@ h2{
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
   opacity: 0;
-  transition: opacity 300ms,
-  transform 300ms;
+  transition: opacity 400ms,
+  transform 400ms;
 }
 
 .content {
@@ -38,7 +38,7 @@ h2{
   grid-template-rows: 30px 1fr 50px;
   align-items: center;
 
-  transition: transform 300ms;
+  transition: transform 400ms;
   transform: translateY(-30px);
 }
 
@@ -64,7 +64,7 @@ header {
     &:hover{
       color: #ac0d0d;
       transform: scale(1.5);
-      transition: 300ms;
+      transition: 400ms;
     }
   }
 
@@ -97,7 +97,7 @@ footer{
 
 @media screen and (max-width: 1200px) {
   .content{
-    max-width: 600px;
+    max-width: 700px;
   }
 }
 

@@ -12,8 +12,10 @@ import {NgStyle} from "@angular/common";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PaginationComponent {
-  page = output<number>()
+  numberOutputEmitter = output<number>()
   pageLocal = signal<number>(1)
+
+  idLocal = input<number>(0)
 
   marginNumber = input.required<string>()
   withNumber = input.required<string>()
@@ -23,7 +25,12 @@ export class PaginationComponent {
     if(page < 1) return
     this.pageLocal.set(page)
 
-    this.page.emit(page)
+    this.numberOutputEmitter.emit(page)
+  }
+
+  changeCharacterId(id:number){
+    if(id < 1) return
+    this.numberOutputEmitter.emit(id)
   }
 
 }

@@ -1,21 +1,23 @@
-import {ChangeDetectionStrategy, Component, ElementRef, signal, viewChild} from '@angular/core';
+import {ChangeDetectionStrategy, Component, ElementRef, inject, signal, viewChild} from '@angular/core';
 import {Character, Gender, Location, Origin} from "../../models/character.model";
 import {JsonPipe, NgOptimizedImage} from "@angular/common";
 import {PaginationComponent} from "../../components/pagination/pagination.component";
+import {CharactersService} from "../../service/characters.service";
 
 @Component({
   selector: 'app-character-modal',
   standalone: true,
   imports: [
     JsonPipe,
-    NgOptimizedImage,
-    PaginationComponent
+    PaginationComponent,
+    NgOptimizedImage
   ],
   templateUrl: './character-modal.component.html',
   styleUrl: './character-modal.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CharacterModalComponent {
+  characterService = inject(CharactersService)
 
   characterInformation = signal<Character>({
     id: 0,
@@ -52,5 +54,11 @@ export class CharacterModalComponent {
     setTimeout(() => {
       modalElement.style.display = 'none';
     }, 300);
+  }
+
+  makeApiCallById(id: number){
+    this.characterService.getCharacterById(id).subscribe((data) => {
+      this.characterInformation.set(data)
+    })
   }
 }

@@ -6,7 +6,12 @@
 
     @if (characterInformation()) {
       <div class="img-container">
-        <img [src]="characterInformation().image" [alt]="characterInformation().name">
+        @if (characterInformation().image != '') {
+          <img [ngSrc]="characterInformation().image"
+               [alt]="characterInformation().name" width="300" height="300"
+               sizes="(max-width: 400px) 100vw, (max-width: 1200px) 50vw, 100vw"
+          />
+        }
       </div>
       <main>
         <h2>{{ characterInformation().name }}</h2>
@@ -17,7 +22,10 @@
       </main>
     }
     <footer>
-      <app-pagination withNumber="3rem" marginNumber="1rem"/>
+      <app-pagination withNumber="3rem" marginNumber="1rem"
+                      [idLocal]="characterInformation().id"
+                      (numberOutputEmitter)="makeApiCallById($event)"
+      />
     </footer>
 
   </div>

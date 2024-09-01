@@ -23,4 +23,8 @@ export class CharactersService {
     return this.http.get<Character>(url);
   }
 
+  getCharacterById(id: number):Observable<Character>{
+    return this.http.get<Character>(`${this.characterUrl}${id}`);
+  }
+
 }

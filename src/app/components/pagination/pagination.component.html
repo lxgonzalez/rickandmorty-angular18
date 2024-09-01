@@ -1,15 +1,34 @@
 <section class="pagination">
-  <div>
-    <button (click)="changePage(pageLocal()-1)"
-            [disabled]="pageLocal() == 1"
-    >Previous
-    </button>
-  </div>
-  <div [ngStyle]="{'margin-left': marginNumber(), 'margin-right': marginNumber(), 'width': withNumber()}">
-    <p>{{ pageLocal() }}</p>
-  </div>
-  <div>
-    <button (click)="changePage(pageLocal()+1)">Next</button>
-  </div>
+  @if (idLocal() == 0) {
+    <div>
+      <button (click)="changePage(pageLocal()-1)"
+              [disabled]="pageLocal() == 1"
+      >Previous
+      </button>
+    </div>
+    <div [ngStyle]="{'margin-left': marginNumber(), 'margin-right': marginNumber(), 'width': withNumber()}">
+      <p>{{ pageLocal() }}</p>
+    </div>
+    <div>
+      <button (click)="changePage(pageLocal()+1)">Next</button>
+    </div>
+  }
+
+  @if (idLocal() > 0) {
+    <div>
+      <button (click)="changeCharacterId(idLocal()-1)"
+              [disabled]="idLocal() == 1"
+      >Previous
+      </button>
+    </div>
+    <div [ngStyle]="{'margin-left': marginNumber(), 'margin-right': marginNumber(), 'width': withNumber()}">
+      <p>{{ idLocal() }}</p>
+    </div>
+    <div>
+      <button (click)="changeCharacterId(idLocal()+1)">Next</button>
+    </div>
+
+  }
 </section>
+
 
