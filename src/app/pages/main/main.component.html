@@ -1,7 +1,7 @@
 <header>
   <h1>Characters Rick & Morty</h1>
 </header>
-<app-pagination (page)="makeApiCallCharacters($event)"></app-pagination>
+<app-pagination marginNumber="2rem" withNumber="5rem" (page)="makeApiCallCharacters($event)"></app-pagination>
 <section class="characters">
 
   @if (characters$ | async; as characters) {

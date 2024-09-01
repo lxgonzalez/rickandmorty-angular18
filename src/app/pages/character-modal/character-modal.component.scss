@@ -36,7 +36,7 @@ h2{
     "img footer";
   grid-template-columns: 300px 1fr;
   grid-template-rows: 30px 1fr 50px;
-  justify-content: center;
+  align-items: center;
 
   transition: transform 300ms;
   transform: translateY(-30px);
@@ -55,7 +55,7 @@ header {
   justify-self: end;
 
   >button{
-    margin: 10px 10px 0  0;
+    margin-right: 10px;
 
     text-decoration: none;
     background-color: transparent;
@@ -74,6 +74,7 @@ header {
 
   grid-area: img;
   width: 300px;
+  height: 300px;
   >img{
     border-radius: 10px 0 0 10px;
     width: 100%;
@@ -115,7 +116,7 @@ footer{
 
     .img-container {
       width: 100%;
-      margin-bottom: 1.5rem;
+      margin-bottom: 20px;
 
       > img {
         border-radius: 10px 10px 0 0;
@@ -129,7 +130,7 @@ footer{
   }
 
   header > button {
-    margin: 0 10px 10px 0;
+    margin: 0 5px 5px 0;
 
   }
 }

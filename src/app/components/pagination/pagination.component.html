@@ -5,7 +5,7 @@
     >Previous
     </button>
   </div>
-  <div>
+  <div [ngStyle]="{'margin-left': marginNumber(), 'margin-right': marginNumber(), 'width': withNumber()}">
     <p>{{ pageLocal() }}</p>
   </div>
   <div>

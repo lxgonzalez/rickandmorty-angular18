@@ -1,15 +1,14 @@
 @import "../../../../public/colors.scss";
 
 .pagination{
-  margin-bottom: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  :nth-child(2){
-    margin: 0 2rem;
-    width: 5rem;
-  }
+  //:nth-child(2){
+  //  margin: 0 2rem;
+  //  width: 5rem;
+  //}
 }
 p{
   font-size: 1.3rem;
@@ -17,7 +16,6 @@ p{
   box-shadow: 0 0 5px $primary;
 }
 button{
-  font-family: "VictorMono",monospace,"system-ui",sans-serif;
   box-shadow: 0 0 3px $primary;
   font-size: 1rem;
   background-color: $primary;
