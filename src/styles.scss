@@ -1,8 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
 @import "../public/colors.scss";
 
 body {
-  background: linear-gradient(180deg, $secondary 0%, $primary 100%);
   font-family: "VictorMono", monospace, "system-ui", sans-serif;
+  background-color: $secondary;
   color: $primary;
 }

@@ -1,13 +1,15 @@
 import {ChangeDetectionStrategy, Component, ElementRef, signal, viewChild} from '@angular/core';
 import {Character, Gender, Location, Origin} from "../../models/character.model";
 import {JsonPipe, NgOptimizedImage} from "@angular/common";
+import {PaginationComponent} from "../../components/pagination/pagination.component";
 
 @Component({
   selector: 'app-character-modal',
   standalone: true,
   imports: [
     JsonPipe,
-    NgOptimizedImage
+    NgOptimizedImage,
+    PaginationComponent
   ],
   templateUrl: './character-modal.component.html',
   styleUrl: './character-modal.component.scss',
@@ -33,11 +35,22 @@ export class CharacterModalComponent {
   modal = viewChild.required<ElementRef>('myModal');
 
   open(character: Character) {
-    this.characterInformation.set(character)
-    this.modal().nativeElement.style.display = 'block';
+    this.characterInformation.set(character);
+    const modalElement = this.modal().nativeElement;
+
+    modalElement.style.display = 'block';
+
+    setTimeout(() => {
+      modalElement.classList.add('open');
+    }, 10);
   }
 
   close() {
-    this.modal().nativeElement.style.display = 'none';
+    const modalElement = this.modal().nativeElement;
+    modalElement.classList.remove('open');
+
+    setTimeout(() => {
+      modalElement.style.display = 'none';
+    }, 300);
   }
 }

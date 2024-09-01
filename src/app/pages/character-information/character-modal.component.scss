@@ -18,13 +18,15 @@ h2{
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
-
+  opacity: 0;
+  transition: opacity 300ms,
+  transform 300ms;
 }
 
 .content {
-  background-color:$secondary;
+  background-color:$background-contrast;
   margin: auto;
-  width: 80%;
+  max-width: 800px;
   border-radius: 10px;
 
   display: grid;
@@ -35,9 +37,21 @@ h2{
   grid-template-columns: 300px 1fr;
   grid-template-rows: 30px 1fr 50px;
   justify-content: center;
+
+  transition: transform 300ms;
+  transform: translateY(-30px);
+}
+
+.container.open {
+  opacity: 1;
+}
+
+.container.open .content {
+  transform: translateY(0);
 }
 
 header {
+  grid-area: header;
   justify-self: end;
 
   >button{
@@ -76,4 +90,46 @@ main{
 }
 
 footer{
+  grid-area: footer;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .content{
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .content {
+    max-width: 300px;
+    height: 580px;
+    grid-template-areas:
+    "img"
+    "main"
+    "footer"
+    "header";
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 200px 50px 30px;
+
+    .img-container {
+      width: 100%;
+      margin-bottom: 1.5rem;
+
+      > img {
+        border-radius: 10px 10px 0 0;
+      }
+    }
+
+  }
+
+  main {
+    margin-left: 1rem;
+  }
+
+  header > button {
+    margin: 0 10px 10px 0;
+
+  }
 }
