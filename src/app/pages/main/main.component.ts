@@ -5,7 +5,7 @@ import {firstValueFrom, Observable} from "rxjs";
 import {AsyncPipe} from "@angular/common";
 import {CardCharacterComponent} from "../../components/card-character/card-character.component";
 import {PaginationComponent} from "../../components/pagination/pagination.component";
-import {CharacterModalComponent} from "../character-information/character-modal.component";
+import {CharacterModalComponent} from "../character-modal/character-modal.component";
 
 @Component({
   selector: 'app-main',

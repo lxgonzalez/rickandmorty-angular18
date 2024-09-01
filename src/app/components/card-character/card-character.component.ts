@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component, ElementRef, input, OnInit, output, viewChild} from '@angular/core';
 import {Character} from "../../models/character.model";
 import {DatePipe, JsonPipe, NgOptimizedImage} from "@angular/common";
-import {CharacterModalComponent} from "../../pages/character-information/character-modal.component";
+import {CharacterModalComponent} from "../../pages/character-modal/character-modal.component";
 import {MainComponent} from "../../pages/main/main.component";
 import {Observable} from "rxjs";
 
