@@ -10,8 +10,9 @@ This project is an Angular v18 application that uses the zoneless mode for impro
 >[!NOTE]
 >- provideExperimentalZonelessChangeDetection
 >- ChangeDetectionStrategy.OnPush
->- Images optimized with NgNgOptimizedImage
+>- Images optimized with NgOptimizedImage
 >- Modal realized without libraries
+>- Font by **[Rick and Morty API](https://www.dafontfree.co/rick-and-morty-font/)** 
 ## Installation ⚙️
 Clone the repository:
 
