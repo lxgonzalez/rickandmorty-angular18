@@ -1,10 +1,25 @@
 @import "../public/colors.scss";
 
+@font-face {
+  font-family: 'RickandMortyFont';
+  src: url(../public/font_rickandmorty.ttf);
+}
+
+h1 {
+  font-family: 'RickandMortyFont', monospace,"VictorMono", monospace, "system-ui", sans-serif;
+  color: $letter;
+  text-shadow: -1px 0 $letter-contrast,
+  0 1px $letter-contrast,
+  1px 0 $letter-contrast,
+  0 -1px $letter-contrast;
+}
+
 body {
   font-family: "VictorMono", monospace, "system-ui", sans-serif;
   background-color: $secondary;
   color: $primary;
 }
+
 button {
-  font-family: "VictorMono",monospace,"system-ui",sans-serif;
+  font-family: "VictorMono", monospace, "system-ui", sans-serif;
 }

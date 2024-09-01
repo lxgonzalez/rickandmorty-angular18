@@ -26,8 +26,6 @@ export class CardCharacterComponent implements OnInit {
 
   sendCharacter = output<Character>()
 
-  modal = viewChild.required(MainComponent);
-
   ngOnInit() {
     // this.loaded.emit(this.character().url)
   }
